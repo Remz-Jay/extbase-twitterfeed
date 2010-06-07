@@ -6,11 +6,11 @@ README
 2.	Initialize plugin in the typo3 backend
 3.	Register a new application at http://dev.twitter.com and get your consumer key/secret, private token/secret and anywhere API key
 4.	Add typoscript configuration to your master template or any template you wish to enable the plugin for:
-> plugin.tx_twitterfeed.settings {
->	consumerKey = <insert key>
->	consumerSecret = <insert secret>
->	anywhereAPIKey = <insert api>
-> }
+`plugin.tx_twitterfeed.settings {
+	consumerKey = <insert key>
+	consumerSecret = <insert secret>
+	anywhereAPIKey = <insert api>
+}`
 5.	Add a new feed with account using 'list' in the typo3 backend.
 6.	Manually add your private token/secret to the database to the twitterfeed_account table (this will be fixed in backend soon)
 7.	Add the plugin to a page
@@ -34,7 +34,7 @@ README
 >  (at your option) any later version.
 >
 >  The GNU General Public License can be found at
->  http://www.gnu.org/copyleft/gpl.html.
+>  <http://www.gnu.org/copyleft/gpl.html>.
 >
 >  This script is distributed in the hope that it will be useful,
 >  but WITHOUT ANY WARRANTY; without even the implied warranty of
