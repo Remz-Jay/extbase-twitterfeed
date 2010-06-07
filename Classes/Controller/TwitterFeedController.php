@@ -76,9 +76,7 @@ class Tx_TwitterFeed_Controller_TwitterFeedController extends Tx_Extbase_MVC_Con
 		
 		$account = $twitterFeed->getAccount();
 		if($account->getUserToken()==null || $account->getUserSecret==null) {
-			$account->setUserToken("19768085-AhlDlT4RujW7uCqrvlVOBeTOOyM5WOmi6823psvAP");
-			$account->setUserSecret("VVT8mGWnhLzwPMGofZleg06EKvCy9KcCp5T8d9l2Y");
-			$this->twitterAccountRepository->update($account);
+			die('You need to add a twitter authorization token/secret to the database manually for now.');
 			
 		}
 		/*
