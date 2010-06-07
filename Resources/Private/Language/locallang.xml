@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the Twitter Feed extension in the FRONTEND</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_twitterfeed_domain_model_twitterfeed">The Twitter Feed</label>
+			<label index="tx_twitterfeed_domain_model_twitterfeed.feed_name">feedName</label>
+			<label index="tx_twitterfeed_domain_model_twitterfeed.account">account</label>
+			<label index="tx_twitterfeed_domain_model_twitteraccount">TwitterAccount</label>
+			<label index="tx_twitterfeed_domain_model_twitteraccount.user_name">userName</label>
+			<label index="tx_twitterfeed_domain_model_twitteraccount.pass_word">passWord</label>
+		</languageKey>
+	</data>
+</T3locallang>

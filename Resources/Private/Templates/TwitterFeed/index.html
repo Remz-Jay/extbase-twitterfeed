@@ -1,0 +1,27 @@
+<f:layout name="default" />
+
+This Template is responsible for creating a table of domain objects.
+
+<f:section name="main">
+<h1>Listing for TwitterFeed</h1>
+
+<f:flashMessages />
+
+<table>
+	<tr>
+		<th><f:translate key="tx_twitterfeed_domain_model_twitterfeed.feed_name" /></th>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+	<f:for each="{twitterFeeds}" as="twitterFeed">
+		<tr>
+			<td><f:link.action absolute="true" action="show" arguments="{twitterFeed : twitterFeed}"> {twitterFeed.feedName}</f:link.action></td>
+			<td><f:link.action absolute="true" action="edit" arguments="{twitterFeed : twitterFeed}">Edit</f:link.action></td>
+			<td><f:link.action absolute="true" action="delete" arguments="{twitterFeed : twitterFeed}">Delete</f:link.action></td>
+		</tr>
+	</f:for>
+</table>
+
+<f:link.action absolute="true" action="new">New TwitterFeed</f:link.action>
+</f:section>

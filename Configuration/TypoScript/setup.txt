@@ -1,0 +1,69 @@
+plugin.tx_twitterfeed.settings {
+	consumerKey = empty
+	consumerSecret = empty
+}
+
+plugin.tx_twitterfeed._CSS_DEFAULT_STYLE (
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-twitterfeed-pi1 table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-twitterfeed-pi1 table th {
+		font-weight:bold;
+	}
+
+	.tx-twitterfeed-pi1 table td {
+		vertical-align:top;
+	}
+	
+	.tx-twitterfeed-pi1 .tweet {
+		display: block;
+		border: 1px solid #AAAAAA;
+		margin: 2px;
+		padding: 5px;
+		padding-bottom: 15px;
+		position: relative;
+	}
+	
+	.tx-twitterfeed-pi1 .tweet.odd {
+		background-color: #EEEEEE;
+	}
+	.tx-twitterfeed-pi1 .tweet.even {
+		background-color: #DDDDDD;	
+	}
+	.tx-twitterfeed-pi1 .tweet .tweet_date {
+		position: absolute;
+		right: 5px;
+		bottom: 1px;
+		font-size: 8px;
+	}
+	.tx-twitterfeed-pi1 .tweet .tweet_geo {
+		position: absolute;
+		left: 60px;
+		bottom: 1px;
+		font-size: 9px;
+		display: inline;
+	}		
+	
+	.tx-twitterfeed-pi1 .tweet .tweet_content {
+		position: absolute;
+		top: 5px;
+		left: 60px;
+	}
+	
+	.tx-twitterfeed-pi1 .tweet .tweet_content .tweet_username {
+		font-weight: bold;
+		color: #65a1e5;
+	}
+	
+	.tx-twitterfeed-pi1 .tweet .tweet_content .tweet_hashtag {
+		font-style:italic;
+		color: #26c6b1;
+	}
+)

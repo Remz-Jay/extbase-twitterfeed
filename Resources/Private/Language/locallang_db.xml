@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'twitter_feed'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_twitterfeed_domain_model_twitterfeed">Twitter Feed</label>
+			<label index="tx_twitterfeed_domain_model_twitterfeed.feed_name">Feed Name</label>
+			<label index="tx_twitterfeed_domain_model_twitterfeed.account">Account</label>
+			<label index="tx_twitterfeed_domain_model_twitteraccount">Twitter Account</label>
+			<label index="tx_twitterfeed_domain_model_twitteraccount.user_name">User Name</label>
+			<label index="tx_twitterfeed_domain_model_twitteraccount.pass_word">Pass Word</label>
+		</languageKey>
+	</data>
+</T3locallang>

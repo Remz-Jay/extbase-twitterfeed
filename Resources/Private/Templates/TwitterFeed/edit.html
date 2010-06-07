@@ -1,0 +1,17 @@
+<f:layout name="default" />
+
+This template displays a EDIT form for the current domain object.
+
+<f:section name="main">
+<h1>Edit TwitterFeed</h1>
+
+<f:flashMessages />
+
+<f:render partial="formErrors" />
+
+<f:form method="post" action="update" name="twitterFeed" object="{twitterFeed}">
+	<label for="title"><f:translate key="tx_twitterfeed_domain_model_twitterfeed.feed_name" /></label><br />
+	<f:form.textbox property="feed_name" /><br />
+	<f:form.submit value="Edit" />
+</f:form>
+</f:section>

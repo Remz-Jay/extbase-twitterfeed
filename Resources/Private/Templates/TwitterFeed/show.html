@@ -1,0 +1,83 @@
+{namespace tf=Tx_TwitterFeed_ViewHelpers}
+<f:layout name="default" />
+
+This Template is responsible for creating a single view for a domain
+object
+
+<f:section name="main">
+	<script type="text/javascript">
+		twttr.anywhere(function (T) {
+		    T.hovercards();
+		    T("#tbox").tweetBox({			  
+		      label: "Drop me a line about your thoughts!",
+		      defaultContent: "@RemzJay"
+			  <f:cycle values="{0:0,1:1}" as="test"></f:cycle>		      
+		    });
+			T('#follow-twitterapi').followButton("RemzJay");
+		});
+	</script>
+	<div id="tbox"></div>
+	<span id="follow-twitterapi"></span>
+	<br />
+
+Feed:
+[ <f:link.action action="show" absolute="true"
+		arguments="{twitterFeed : twitterFeed,feed:'1'}">Me</f:link.action> |
+<f:link.action action="show" absolute="true"
+		arguments="{twitterFeed : twitterFeed,feed:'2'}">Friends</f:link.action> |
+<f:link.action action="show" absolute="true"
+		arguments="{twitterFeed : twitterFeed,feed:'3'}">Tweeps</f:link.action> |
+<f:link.action action="show" absolute="true"
+		arguments="{twitterFeed : twitterFeed,feed:'4'}">Search:Remco</f:link.action> ]
+<h1>{title} latest tweets ({status})</h1>
+
+	<f:flashMessages />
+	<f:renderFlashMessages class="tx-extbase-flash-message" />
+	
+	<f:if condition="{data}">
+		<f:if condition="{data.results}">
+			<f:then>
+				<f:for each="{data.results}" as="msg">
+					<f:cycle values="{0: 'odd', 1: 'even'}" as="zebraClass">
+						<div class="tweet {zebraClass}">
+					</f:cycle>
+					<img src="{msg.profile_image_url}" alt="{msg.from_user}" />
+					<div class="tweet_date"><f:link.external target="_blank"
+						uri="http://www.twitter.com/{msg.user.screen_name}/status/{msg.id}">
+						<f:format.date format="d-m-Y H:i:s">{msg.created_at}</f:format.date>
+					</f:link.external></div>
+					<tf:twitter tweet="{msg}" />
+					</div>
+				</f:for>
+			</f:then>
+			<f:else>
+				<f:for each="{data}" as="msg">
+					<f:cycle values="{0: 'odd', 1: 'even'}" as="zebraClass">
+						<div class="tweet {zebraClass}">
+					</f:cycle>
+					<img src="{msg.user.profile_image_url}" alt="{msg.user.name}" />
+					<div class="tweet_date"><f:link.external target="_blank"
+						uri="http://www.twitter.com/{msg.user.screen_name}/status/{msg.id}">
+						<f:format.date format="d-m-Y H:i:s">{msg.created_at}</f:format.date>
+					</f:link.external></div>
+					<f:if condition="{msg.place.full_name}">
+						<div class="tweet_geo">Geo: <f:link.external target="_blank"
+							uri="http://maps.google.com/maps?q={msg.geo.coordinates.0},{msg.geo.coordinates.1}">{msg.place.full_name}({msg.place.country})</f:link.external>
+						</div>
+					</f:if>
+					<tf:twitter tweet="{msg}" />
+					</div>
+				</f:for>
+			</f:else>
+		</f:if>
+		
+	</f:if>
+
+</f:section>
+
+<!-- 
+<f:link.action action="edit" absolute="true" arguments="{twitterFeed : twitterFeed}">Edit</f:link.action>
+<f:link.action action="delete" absolute="true" arguments="{twitterFeed : twitterFeed}">Delete</f:link.action>
+
+<f:link.action action="index" absolute="true">Back to listing</f:link.action>
+-->

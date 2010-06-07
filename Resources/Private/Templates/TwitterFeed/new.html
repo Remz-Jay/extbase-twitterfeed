@@ -1,0 +1,17 @@
+<f:layout name="default" />
+
+This template displays a NEW form for the current domain object.
+
+<f:section name="main">
+<h1>New TwitterFeed</h1>
+
+<f:flashMessages />
+
+<f:render partial="formErrors" />
+
+<f:form method="post" action="create" name="newTwitterFeed" object="{newTwitterFeed}">
+	<label for="title"><f:translate key="tx_twitterfeed_domain_model_twitterfeed.feed_name" /></label><br />
+	<f:form.textbox property="feed_name" /><br />
+	<f:form.submit value="Create new" />
+</f:form>
+</f:section>

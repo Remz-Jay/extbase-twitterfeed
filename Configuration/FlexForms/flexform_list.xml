@@ -1,0 +1,24 @@
+<T3DataStructure>
+  <sheets>
+    <sDEF>
+      <ROOT>
+        <TCEforms>
+          <sheetTitle>Options</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+          <displayFeed>
+            <TCEforms>
+              <label>Feed to display</label>
+              <config>
+                <type>select</type>
+                <foreign_table>tx_twitterfeed_domain_model_twitterfeed</foreign_table>
+                <foreign_table_where>AND tx_twitterfeed_domain_model_twitterfeed.pid=###CURRENT_PID###</foreign_table_where>
+              </config>
+            </TCEforms>
+          </displayFeed>
+        </el>
+      </ROOT>
+    </sDEF>
+  </sheets>
+</T3DataStructure>
